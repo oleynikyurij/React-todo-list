@@ -7,12 +7,19 @@ import TodoList from './components/TodoList';
 
 const App = () => {
     const time = new Date().toString();
+    //начальные значения списка
+    const dataСollection = [
+        { label: 'Learn React', important: false },
+        { label: 'First App', important: true },
+        { label: 'Drink Coffee', important: false }
+    ];
+
     return (
         <section>
             <span>{time}</span>
             <Header />
             <Search />
-            <TodoList />
+            <TodoList data={dataСollection} />
         </section>
     );
 };
