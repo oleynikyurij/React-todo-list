@@ -7,10 +7,13 @@ const TodoList = () => {
     return (
         <ul>
             <li>
-                <TodoListItem />
+                <TodoListItem label="Learn React" />
             </li>
             <li>
-                <TodoListItem />
+                <TodoListItem label="First App" important />
+            </li>
+            <li>
+                <TodoListItem label="Drink Coffee" />
             </li>
         </ul>
     );
