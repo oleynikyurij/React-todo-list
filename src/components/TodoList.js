@@ -4,29 +4,19 @@ import TodoListItem from './TodoListItem';
 
 //деструктурируем данные из массива
 const TodoList = ({ data }) => {
-    // const items = ['Learn React', 'First App'];
-    return (
-        <ul>
-            <li>
-                <TodoListItem
-                    label={data[0].label}
-                    important={data[0].important}
-                />
+    // массив элементов списка
+    const elements = data.map(item => {
+			  // разворачиваем объект и присваиваем значение id из объекта, а остальные свойства передаём в itemProps
+        const { id, ...itemProps } = item;
+        return (
+            <li key={id}>
+                {/* <TodoListItem label={item.label} important={item.important} /> */}
+                {/* через spread оператор разворачиваем объект */}
+                <TodoListItem {...itemProps} />
             </li>
-            <li>
-                <TodoListItem
-                    label={data[1].label}
-                    important={data[1].important}
-                />
-            </li>
-            <li>
-                <TodoListItem
-                    label={data[2].label}
-                    important={data[2].important}
-                />
-            </li>
-        </ul>
-    );
+        );
+    });
+    return <ul>{elements}</ul>;
 };
 
 export default TodoList;
