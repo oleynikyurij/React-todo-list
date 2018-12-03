@@ -17,14 +17,5 @@ const App = () => {
         { label: 'Drink Coffee', important: false, id: 3 }
     ];
 
-    return (
-        <div className = "wrap">
-            <span>{time}</span>
-            <Header />
-            <Search />
-            <TodoList data={dataСollection} />
-        </div>
-    );
-};
 
 ReactDOM.render(<App />, document.getElementById('root'));
