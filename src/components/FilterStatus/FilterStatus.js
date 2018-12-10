@@ -2,7 +2,7 @@ import React from 'react';
 
 // import './item-status-filter.css';
 
-const ItemStatusFilter = () => {
+const FilterStatus = () => {
   return (
     <div className="">
       <button type="button"
@@ -15,4 +15,4 @@ const ItemStatusFilter = () => {
   );
 };
 
-export default ItemStatusFilter;
+export default FilterStatus;
