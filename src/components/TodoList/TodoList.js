@@ -5,7 +5,7 @@ import  './style.css';
 import TodoListItem from '../TodoListItem';
 
 //деструктурируем данные из массива
-const TodoList = ({ data }) => {
+const TodoList = ({ data, onDeleted }) => {
     // массив элементов списка
     const elements = data.map(item => {
 			  // разворачиваем объект и присваиваем значение id из объекта, а остальные свойства передаём в itemProps
@@ -14,7 +14,8 @@ const TodoList = ({ data }) => {
             <li key={id} className='list-group-item'>
                 {/* <TodoListItem label={item.label} important={item.important} /> */}
                 {/* через spread оператор разворачиваем объект */}
-                <TodoListItem {...itemProps} />
+                <TodoListItem {...itemProps}
+								onDeleted = {()=> onDeleted(id) } />
             </li>
         );
     });
