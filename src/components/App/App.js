@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import  './app.css';
+
 import Header from '../Header';
 import Search from '../Search';
 import TodoList from '../TodoList';
@@ -15,10 +17,10 @@ const App = () => {
 	];
 
 	return (
-			<div className="wrap">
+			<div className='todo-app'>
 					<Header toDo={1} done={3} />
 
-					<div>
+					<div className = 'top-panel d-flex'>
 							<Search />
 							<FilterStatus />
 					</div>

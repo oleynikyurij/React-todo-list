@@ -1,11 +1,11 @@
 import React from 'react';
 
+import  './style.css';
+
 const Search = () => {
     const SearchText = 'search';
-    const SearchStyle = {
-        fontSize: 25
-    };
-    return <input type="text" style={SearchStyle} placeholder={SearchText} />;
+    
+    return <input type="text" className ='form-control search-input' placeholder={SearchText} />;
 };
 
 export default Search;
